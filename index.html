@@ -3,62 +3,139 @@
     <head> <!--passagem de matadados-->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>workshop css basico</title>
+        <title>Site do Batman</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                color: white;
+                background-color: black;
+                font-family: system-ui, Arian, sans-serif;
+                line-height: 1.5;
+            }
+            .container {
+                width: 900px;
+                margin: 0 auto;
+                padding: 10px;
+            }
+            .box {
+                background: black;
+                border: 1px solid gray;
+                border-radius: 12px;
+                padding: 14px;
+                margin-bottom: 12px;
+            }
+            h1,h2 {
+                color: yellow;
+                margin: 0 0 8px;
+            }
+            .subtitulo {
+                margin: 0;
+                color: white;
+            }
+            p {
+                color: white;
+            }
+            #apresentacao {
+                border-left: 8px solid yellow;
+            }
+            .nav{
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                gap: 10px;
+                flex-wrap: wowrap;
+            }
+            .nav-link {
+                display: inline-block;
+                text-decoration: none;
+                color: black;
+                background: yellow;
+                padding: 8px 10px;
+                border-radius: 10px;
+                font-weight: 700;
+            }
+            .nav-link:hover {
+                background: purple;
+            }
+            .gallery {
+                width: 920px;
+                display: flex;
+                gap: 10px;
+                flex-wrap: wowrap;
+            }
+            .bat-img{
+                width: 220px;
+                height: 120px;
+                border: 2px solid white;
+                border-radius: 10px;
+            }
+            footer p{
+                color: white;
+                margin: 6px 0 0;
+            }
+            .link{
+                color: yellow;
+                text-decoration: none;
+                font-weight: 700;
+            }
+            .link:hover{
+                text-decoration: underline;
+            }
+        </style>
     </head>
-    <body>
-        <header>
-            <h1>workshop css basico</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">inicio</a></li>
+    <body id="topo">
+        <div class="container" id="pagina">
+            <header class="box" id="cabecalho">
+                <div class="header-interno">
+                    <h1 class="titulo">Site do Batman</h1>
+                    <p class="subtitulo">
+                        Gotham City: <strong>vigilancia</strong>, <em>estrategia</em> e tecnologia.
+                    </p>
+                </div>
+            </header>
+
+            <nav class="box" id="menu">
+                <ul class="nav">
+                    <li><a class="nav-link" href="apresentacao">Quem é?</a></li>
+                    <li><a class="nav-link" href="galeria">Galeria</a></li>
+                    <li><a class="nav-link" href="rodape">Rodapé</a></li>
                 </ul>
             </nav>
-        </header>
-        <main>
-            <section>
-                <h2>introdução</h2>
-                <p>Este é um exemplo de pagina estruturada com 
-                <strong>html sematico</strong> para aplicar
-                estilos com css. você tambem pode usar <em>
-                ênfase</em> no texto<p>
-            </section>
-            <section>
-                <h2>lista de topicos</h2>
-                <ul>
-                    <li>estrutura basica</li>
-                    <li>navegação</li>
-                    <li>imagens</li>
-                    <li>tabela</li>
-                </ul>
-            </section>
-            <section>
-                <h2>imagem</h2>
-                <img src="https://picsum.photos/800/400" alt="imagem de exemplo">
-            </section>
-            <section>
-                <h2>tabela de conteudo</h2>
-                <table border="1">
-                    <thead>
-                        <tr>
-                            <th>recurso</th>
-                            <th>descrição</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <td>header</td>
-                        <td>parte superior da pagina</td>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="2">exemplo de estrutura organizada</td>
-                        </tr>
-
-                    </tfoot>
-                </table>
-            </section>
-        </main>
-        <footer>
-            <p>2026 - projeto educacional de html e css</p>
-        </footer>
+            <main id="conteudo">
+                <section class="box" id="apresentacao">
+                    <h2>Quem é o Batman?</h2>
+                    <p>
+                        Batman (Bruce Wayne) é um personagem da DC Comics e atua como justiceiro (Sem ninguem ter pedido isso a ele) de Gotham.
+                        Ele não tem superpoderes: Sua força esta em <strong>treinamento</strong>, <em>tecnologia</em> e riqueza (muita riqueza).
+                    </p>
+                    <p>
+                        Em vairas historias, Gotham representa problemas sociais: desigualdade, corrupção e violênca urbana. 
+                        Alguns quadrinhos usam o Batmam como forma de <strong>critica social</strong>, mostrando como falhas
+                        nas intituições, interesses economicos e autoritarismo afetam principalmente quem tem menos direitos 
+                        e oportnidades.
+                    </p>
+                </section>
+                <section class="box" id="galeria">
+                    <h2>galeria</h2>
+                    <div class="gallery" id="galeria-imagens">
+                    <img class="bat-img" src="batman 1.webp">    
+                        <img class="bat-img" src="batman 2.webp"> 
+                            <img class="bat-img" src="batman 3.webp">                     
+                    </div>
+                </section>
+            </main>
+            <footer class="box" id="rodape">
+                <p>
+                    <a class="link" href="#Topo">Topo</a>
+                </p>
+                <p>
+                    Exemplo de website para treino HTML e CSS.
+                </p>
+            </footer>
+        </div>
     </body>
 </html>
